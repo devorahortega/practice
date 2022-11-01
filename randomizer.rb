@@ -19,3 +19,10 @@ p ("a".."z").to_a.sample
 p [1, 2, 3].sample(2)
 
 [1, 2, 3].sample(random: SecureRandom)
+
+def generate_code(number)
+  charset = Array("A".."Z") + Array("a".."z")
+  Array.new(number) { charset.sample }.join
+end
+
+puts generate_code(20)
