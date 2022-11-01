@@ -9,3 +9,5 @@ p SecureRandom.random_number
 p SecureRandom.hex
 
 p SecureRandom.alphanumeric
+
+p [5, 15, 30, 60].shuffle.first
