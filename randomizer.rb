@@ -7,3 +7,5 @@ require "securerandom"
 p SecureRandom.random_number
 
 p SecureRandom.hex
+
+p SecureRandom.alphanumeric
