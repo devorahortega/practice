@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random State</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="randomstate.js" defer></script>
@@ -9,10 +10,71 @@
   <body>
     <div id="app">
       {{ message }}
-      <div><button v-on:click="calculateSum()">Compute sum</button></div>
-      <p>The sum is: {{sum}}</p>
+      <div><button v-on:click="randomState()">Click</button></div>
+      <div id="result"></div>
+      <button onclick="embedElements()">Show Data</button>
+      <p>Your state is: {{state}}</p>
     </div>
   </body>
+  <script>
+    {
+      const theStates = [
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "Florida",
+        "Georgia",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Pennsylvania",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming",
+      ];
+      function embedElements() {
+        theStates.forEach((el) => {
+          document.getElementById("result").innerHTML += `<div>${el}</div><br />`;
+        });
+      }
+    }
+  </script>
 </html>
-
-<element onclick="functionToExecute()">Click</element>
