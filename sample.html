@@ -71,10 +71,15 @@
         "Wyoming",
       ];
       function embedElements() {
-        theStates.forEach((el) => {
-          document.getElementById("result").innerHTML += `<div>${el}</div><br />`;
+        theStates.forOne((el) => {
+          document.getElementById(getRandom()).innerHTML += `<div>${el}</div><br />`;
         });
       }
     }
   </script>
+  <style>
+    .background {
+      color: rgb(115, 32, 32);
+    }
+  </style>
 </html>
