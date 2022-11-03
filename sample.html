@@ -8,78 +8,24 @@
     <script src="randomstate.js" defer></script>
   </head>
   <body>
-    <div id="app">
-      {{ message }}
-      <div><button v-on:click="randomState()">Click</button></div>
-      <div id="result"></div>
-      <button onclick="embedElements()">Show Data</button>
-      <p>Your state is: {{state}}</p>
-    </div>
+    <form name="rn">
+      <input type="text" id="tb" name="tb" />
+      </br>
+    
+      <input type="button" value="Random State!" onclick="randomState();" />
+    </form>
+    
   </body>
   <script>
     {
-      const theStates = [
-        "Alabama",
-        "Alaska",
-        "Arizona",
-        "Arkansas",
-        "California",
-        "Colorado",
-        "Connecticut",
-        "Delaware",
-        "Florida",
-        "Georgia",
-        "Hawaii",
-        "Idaho",
-        "Illinois",
-        "Indiana",
-        "Iowa",
-        "Kansas",
-        "Kentucky",
-        "Louisiana",
-        "Maine",
-        "Maryland",
-        "Massachusetts",
-        "Michigan",
-        "Minnesota",
-        "Mississippi",
-        "Missouri",
-        "Montana",
-        "Nebraska",
-        "Nevada",
-        "New Hampshire",
-        "New Jersey",
-        "New Mexico",
-        "New York",
-        "North Carolina",
-        "North Dakota",
-        "Ohio",
-        "Oklahoma",
-        "Oregon",
-        "Pennsylvania",
-        "Rhode Island",
-        "South Carolina",
-        "South Dakota",
-        "Tennessee",
-        "Texas",
-        "Utah",
-        "Vermont",
-        "Virginia",
-        "Washington",
-        "West Virginia",
-        "Wisconsin",
-        "Wyoming",
-      ];
-      function embedElements() {
-        theStates.forOne((el) => {
-          document.getElementById(getRandom()).innerHTML += `<div>${el}</div><br />`;
-        });
+      
       }
-    }
+      function Random() {
+        return Math.floor(Math.random() * 1000000000);
+      }
+
+      function randomState() {
+        document.getElementById("tb").value = Random();
+      }
   </script>
-  <style>
-    .background {
-      color: rgb(115, 32, 32);
-    }
-  </style>
 </html>
