@@ -51,5 +51,7 @@ const states = [
   "Wyoming",
 ];
 
-const random = Math.floor(Math.random() * states.length);
-console.log(states[random]);
+function randomState(states) {
+  const random = Math.floor(Math.random() * states.length);
+  console.log(states[random]);
+}
